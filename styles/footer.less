@@ -1,0 +1,66 @@
+.footer {
+    background-color: #212122;
+    color: #999999;
+
+    &__container {
+        .container();
+        @media @gt-mobile {
+            padding: 30px 35px;
+        }
+        @media @gt-tablet {
+            padding: 40px 0px 35px;
+        }
+
+        &__linksBlock {
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            gap: 30px;
+
+            @media @gt-mobile {
+                flex-direction: row;
+                justify-content: space-between;
+                padding-top: 0px;
+            }
+            &__social {
+                display: flex;
+
+                &__icon {
+                    width: 36px;
+                    height: 36px;
+                    margin-right: 15px;
+                }
+            }
+
+            &__appLinks {
+                display: flex;
+                gap: 8px;
+                line-height: 20px;
+            }
+
+            &__hhLink {
+                display: none;
+                @media @gt-tablet {
+                    display: block;
+                }
+            }
+        }
+        &__info {
+            padding-top: 15px;
+            padding-bottom: 22px;
+
+            border-top: 1px solid #666;
+            line-height: 20px;
+
+            &__entireNumber {
+                white-space: nowrap;
+            }
+
+            @media @gt-mobile {
+                padding-top: 30px;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
